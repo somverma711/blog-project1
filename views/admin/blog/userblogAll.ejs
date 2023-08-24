@@ -1,0 +1,83 @@
+<%- include('../../header.ejs') %>
+
+<section class="dashboard-wrap mtb-40" style="margin-top: 5.6rem">
+  <div class="container-fluid" style="width: 97%">
+    <div class="body-content">
+      <div class="row pt-5">
+        <%- include('../sidebar.ejs') %>
+        <div class="col-md-10">
+          <div class="dash-right">
+            <div class="dash-header">
+              <div class="dash-title">
+                <h1>Blogs</h1>
+              </div>
+              <div class="dash-nav"></div>
+            </div>
+            <table class="table table-bordered table-striped">
+              <tr>
+                <th>#ID</th>
+                <th>user ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Action</th>
+              </tr>
+
+              <% i=1 %> <% d.forEach((item)=>{ %>
+              <tr>
+                <td><%= i++ %></td>
+                <td><%= item._id %></td>
+                <td><%= item.title.slice(0,20) %></td>
+                <td><%= item.description.slice(0,50) %></td>
+                <td class="text-center">
+                  <img
+                    src="<%= item.image.url %>"
+                    width="50px;"
+                    alt=""
+                    style="height: 2.1rem"
+                  />
+                </td>
+                <td
+                  class="d-flex align-content-center justify-content-around border-0"
+                  style="width: 100%"
+                >
+                  <a
+                    href="/blogview/<%= item._id %>"
+                    class="btn btn-secondary btn-sm"
+                    >view</a
+                  >
+
+                  <a
+                    href="/blogedit/<%= item._id %>"
+                    class="btn btn-warning btn-sm"
+                    >Edit</a
+                  >
+
+                  <a
+                    href="/blogdelete/<%= item._id %>"
+                    class="btn btn-danger btn-sm"
+                    >Delete</a
+                  >
+                </td>
+              </tr>
+
+              <% }) %>
+              <tr>
+                <th>#ID</th>
+                <th>user ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Action</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+
+<%- include('../../footer.ejs') %>

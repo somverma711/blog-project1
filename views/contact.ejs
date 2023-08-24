@@ -1,0 +1,62 @@
+<%- include('./header.ejs') %>
+<section class="cmspage" style="height: 45rem">
+  <div class="container" style="margin-top: 5.6rem">
+    <div class="page-desc">
+      <div class="row justify-content-center">
+        <div
+          class="col-md-10 bg-warning rounded shadow-lg"
+          style="margin-top: 5rem"
+        >
+          <h1 class="text-center pt-5">CONTACT US</h1>
+          <form action="/insertcontact" method="post">
+            <div class="form-group">
+              <input
+                type="text"
+                name="name"
+                class="form-control mb-4 form-control-lg"
+                placeholder="Name"
+                style="background-color: rgb(227, 218, 218)"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="email"
+                class="form-control mb-4 form-control-lg"
+                placeholder="E-Mail"
+                style="background-color: rgb(227, 218, 218)"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="phone"
+                class="form-control mb-4 form-control-lg"
+                placeholder="Phone"
+                style="background-color: rgb(227, 218, 218)"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                rows="4"
+                class="form-control mb-4 form-control-lg"
+                placeholder="Message"
+                style="background-color: rgb(227, 218, 218)"
+              ></textarea>
+            </div>
+            <div class="form-group text-center">
+              <button
+                class="btn btn-success bg-secondary form-control-lg"
+                style="color: black; font-weight: 500; font-size: 20px"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('./footer.ejs') %>

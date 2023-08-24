@@ -1,0 +1,110 @@
+<%- include('./header.ejs') %>
+<section style="height: 650px; margin-top: 5.6rem">
+  <div class="container mt-5">
+    <div
+      class="row d-flex justify-content-center align-items-center h-100 mb-5"
+    >
+      <div class="col col-xl-10">
+        <div
+          class="card bg-secondary border-0 shadow-lg"
+          style="
+            border-radius: 1rem;
+            margin-top: 120px;
+            background-color: rgb(159, 237, 237);
+          "
+        >
+          <div class="row">
+            <br />
+
+            <div
+              class="col-md-6 col-lg-5 d-none d-md-block"
+              style="background-color: rgb(236, 243, 163)"
+            >
+              <img
+                src="/images/usadm.webp"
+                alt="login"
+                class="img-fluid"
+                style="
+                  border-radius: 1rem 0 0 1rem;
+                  background-color: rgb(236, 243, 163);
+                "
+              />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 text-black">
+                <div
+                  class="d-flex align-items-center pb-1"
+                  style="background-color: #6c757d"
+                >
+                  <!-- <img
+                    style="background-color: #6c757d"
+                    src="/images/adimg.jpeg"
+                    class="register_logo"
+                    width="150px"
+                    height="150px"
+                    alt="...."
+                  /> -->
+                </div>
+                <h4
+                  class="text-center mb-3 pb-3 text-warning h2"
+                  style="color: #6696a0"
+                >
+                  User Login
+                </h4>
+
+                <% if(message1.length >0){ %>
+                <div class="alert alert-danger"><%= message1 %></div>
+                <% } %> <% if(message2.length >0){ %>
+                <div class="alert alert-danger"><%= message2 %></div>
+                <% } %>
+
+                <form action="/verifylogin" method="post" class="pt-4">
+                  <div class="form-group mb-4">
+                    <input
+                      type="text"
+                      name="email"
+                      class="form-control form-control-lg"
+                      placeholder="email"
+                    />
+                  </div>
+                  <div class="form-group mb-4">
+                    <input
+                      type="password"
+                      name="password"
+                      class="form-control form-control-lg"
+                      placeholder="password"
+                    />
+                  </div>
+                  <div class="form-group text-center">
+                    <button
+                      type="submit"
+                      class="btn btn-lg btn-block form-control form-control-lg bg-warning"
+                      style="
+                        background: #12587a;
+                        color: #111010;
+                        font-size: 22px;
+                        font-weight: 500;
+                      "
+                    >
+                      Log In
+                    </button>
+                  </div>
+                  <br />
+                  <div class="mt-4">
+                    <span class="mb-5 pb-lg-2">DON`T HAVE AN ACCOUNT?</span>
+                    <a href="/register" class="text-warning h5">REGISTER NOW</a>
+                    <br />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--row end-->
+  </div>
+  <!--container end-->
+</section>
+
+<%- include('./footer.ejs') %>

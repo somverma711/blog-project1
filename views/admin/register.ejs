@@ -1,0 +1,106 @@
+<%- include('../header.ejs') %>
+<div class="w-100" style="margin-top: 5.6rem">
+  <div class="container-fluid p-5">
+    <div class="container shadow-lg" style="border-radius: 2rem 2rem 2rem 2rem">
+      <div
+        class="row bg-secondary"
+        style="border-radius: 1rem 1rem 1rem 1rem; margin-top: 4rem"
+      >
+        <h1 class="mt-5 text-center">
+          <span class="text-black">
+            Create your <b class="text-warning"> Blog </b></span
+          >
+        </h1>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 mt-1">
+          <% if(message.length >0){ %>
+          <div class="alert alert-danger"><%= message %></div>
+          <% } %>
+
+          <form
+            action="/admininsert"
+            method="post"
+            class="text-center"
+            novalidate="novalidate"
+            enctype="multipart/form-data"
+          >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-control mt-3 form-control-lg"
+              style="background-color: rgb(227, 218, 218)"
+              placeholder="Name"
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control mt-3 form-control-lg"
+              style="background-color: rgb(227, 218, 218)"
+              placeholder="email"
+            />
+            <input
+              type="phone"
+              name="phone"
+              id="phone"
+              class="form-control mt-3 form-control-lg"
+              style="background-color: rgb(227, 218, 218)"
+              placeholder="phone"
+            />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-control mt-4 form-control-lg"
+              style="background-color: rgb(227, 218, 218)"
+              placeholder="password"
+            />
+            <input
+              type=" password"
+              name="cpassword"
+              class="form-control mt-3 form-control-lg"
+              style="background-color: rgb(227, 218, 218)"
+              placeholder="Confirm password"
+            />
+            <input
+              type="file"
+              name="image"
+              class="form-control mt-3 form-control-lg"
+              style="background-color: rgb(227, 218, 218)"
+              required
+            />
+            <!-- <label for="">Address</label> -->
+            <textarea
+              type="text"
+              name="address"
+              class="form-control mt-4 form-control-lg"
+              style="background-color: rgb(227, 218, 218)"
+              placeholder="Type your address here"
+              required
+            ></textarea>
+            <!-- <input type="password" name="password" id="password" class="form-control mt-4" placeholder="confirm  password"> -->
+            <button
+              class="btn mt-4"
+              style="
+                background: #b8cf06;
+                color: rgb(0, 0, 0);
+                border: 0;
+                padding: 12px 26px;
+                font-weight: 500;
+              "
+            >
+              REGISTER
+            </button>
+          </form>
+          <br />
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+      <!--row end-->
+    </div>
+    <!--container end-->
+  </div>
+</div>
+
+<%- include('../footer.ejs') %>

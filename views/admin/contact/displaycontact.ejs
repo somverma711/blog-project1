@@ -1,0 +1,66 @@
+<%- include('../../header.ejs') %>
+
+<section class="dashboard-wrap mtb-40" style="margin-top: 5.6rem">
+  <div class="container-fluid" style="width: 97%">
+    <div class="body-content">
+      <div class="row pt-5">
+        <%- include('../sidebar.ejs') %>
+        <div class="col-md-10">
+          <div class="dash-right">
+            <div class="dash-header">
+              <div class="dash-title">
+                <h1>Contact</h1>
+              </div>
+            </div>
+          </div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>#ID</th>
+                <th>UserId</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Message</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% i=1 %> <% d.forEach((item)=>{ %>
+              <tr>
+                <td><%= i++ %></td>
+                <td><%= item._id %></td>
+                <td><%= item.name %></td>
+                <td><%= item.email %></td>
+                <td><%= item.phone %></td>
+                <td><%= item.message %></td>
+                <td class="text-center">
+                  <a
+                    href="/deletecontact/<%= item._id %>"
+                    class="btn btn-danger"
+                    >Delete</a
+                  >
+                </td>
+              </tr>
+              <% }) %>
+            </tbody>
+
+            <tfoot>
+              <tr>
+                <th>#ID</th>
+                <th>UserID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Message</th>
+                <th>Action</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('../../footer.ejs') %>

@@ -1,0 +1,14 @@
+<%- include('./header.ejs') %>
+<section class="cmspage mtb-40" style="margin-top: 7.6rem">
+  <div class="container">
+    <h1>About</h1>
+    <div class="page-desc">
+      <p class="text-justify" style="font-size: 20px"><%= a.description %></p>
+    </div>
+
+    <div class="img">
+      <img style="width: 300px; height: 300px" src="<%= a.image.url %> " />
+    </div>
+  </div>
+</section>
+<%- include('./footer.ejs') %>

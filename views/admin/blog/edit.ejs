@@ -1,0 +1,45 @@
+<%- include('../../header.ejs') %>
+
+<section class="dashboard-wrap mtb-40" style="margin-top: 5.6rem">
+    <div class="container-fluid" style="width: 97%">
+        <div class="body-content">
+            <div class="row pt-5">
+              <%- include('../sidebar.ejs') %>
+                <div class="col-md-10">
+                    <div class="dash-right">
+                      <div class="dash-header">
+                        <div class="dash-title">
+                          <h1>Blogs</h1>
+                        </div>
+                       
+                      </div>
+                      <form action="/blogupdate/<%= edit._id %>" method="post" enctype="multipart/form-data" class="w-50 ">
+                          <div class="mb-3">
+                              <label for="">Title</label>
+                              <input type="text" class="form-control" name="title" value="<%= edit.title %>">
+                          </div>
+                          <div class="mb-3">
+                              <label for="">Description</label>
+                              <textarea name="description" class="form-control" cols="30" rows="30"><%= edit.description %></textarea>
+                          </div>
+                          <div class="md-3">
+                            <label for="">Upload Image</label>
+                            <input type="file" name="image" class="form-control">
+                          </div>
+                          <div class="mb-3" style="margin-top: 2rem;">
+                          <img  src="<%= edit.image.url %>"  alt="">
+                        </div>
+                        <div class="text-center"> <button type="submit" class="btn btn-secondary text-center w-50 mt-3">Update</button></div>
+                          
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      
+        </div>
+</section>
+
+
+<%- include('../../footer.ejs') %>

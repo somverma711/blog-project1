@@ -1,0 +1,103 @@
+<%- include('../../header.ejs') %>
+<section class="dashboard-wrap mtb-40" style="margin-top: 5.6rem">
+  <div class="container-fluid" style="width: 97%">
+    <div class="body-content">
+      <div class="row pt-5">
+        <%- include('../sidebar.ejs') %>
+        <div class="col-md-10">
+          <div class="dash-right">
+            <div class="dash-header">
+              <div class="dash-title">
+                <h1>User list</h1>
+              </div>
+            </div>
+            <table class="table table-bordered table-striped">
+              <tr>
+                <th>#ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Verification</th>
+                <th>Comment</th>
+                <th>Action</th>
+                <th>Action</th>
+              </tr>
+              <% i=1 %> <% d=d.reverse(); d.forEach((item)=>{ %>
+              <tr>
+                <td><%= i++ %></td>
+                <td><%= item.name %></td>
+                <td><%= item.email %></td>
+                <td><%= item.phone %></td>
+                <td><%= item.is_Verified %></td>
+
+                <td class="text-center">
+                  <form action="/update_approve/<%= item._id %>" method="post">
+                    <textarea name="comment"></textarea>
+                    <input type="hidden" name="name" value="<%= item.name %>" />
+                    <input
+                      type="hidden"
+                      name="email"
+                      value="<%= item.email %>"
+                    />
+                 
+                <td
+                  class="d-flex align-content-center justify-content-around border-0"
+                >
+                  <button
+                    type="submit"
+                    name="is_Verified"
+                    class="btn btn-secondary btn-sm"
+                    value="Approved"
+                  >
+                    Approve
+                  </button>
+                  <button
+                    type="submit"
+                    name="is_Verified"
+                    class="btn btn-danger btn-sm"
+                    value="Reject"
+                  >
+                    Reject
+                  </button>
+                </form>
+                </td>
+                <td>
+                  <a
+                    href="/admin/userview/<%= item._id %>"
+                    class="btn btn-secondary btn-sm"
+                    >view</a
+                  >
+                  
+                  <a
+                    href="/admin/userdelete/<%= item._id %>"
+                    class="btn btn-danger btn-sm"
+                    >delete</a
+                  >
+                </td>
+              </tr>
+            
+          </td>
+
+
+              <% }) %>
+              <tr>
+                <th>#ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Verification</th>
+                <th>Comment</th>
+                <th>Action</th>
+                <th>Action</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+
+<%- include('../../footer.ejs') %>

@@ -1,0 +1,49 @@
+<div class="col-md-2">
+  <div class="dash-left">
+    <ul>
+      <li class="active bg-secondary rounded">
+        <a
+          href="/dashboard"
+          class="active bg-secondary rounded"
+          style="font-weight: 500"
+        >
+          Dashboard</a
+        >
+      </li>
+      <li class="bg-warning rounded" style="font-weight: 500">
+        <a href="/displayblog"> DisplayBlogs</a>
+      </li>
+      <li class="bg-warning rounded" style="font-weight: 500">
+        <a href="/displaycategory">Categories</a>
+      </li>
+      <li class="bg-warning rounded" style="font-weight: 500">
+        <a href="/changepassword">Change Password</a>
+      </li>
+      <li class="bg-warning rounded" style="font-weight: 500">
+        <a href="/changeprofile">Change Profile</a>
+      </li>
+
+      <% if(is_Verified == "Admin") { %>
+      <li class="bg-warning rounded" style="font-weight: 500">
+        <a href="/displayabout">About</a>
+      </li>
+      <!-- <li class="bg-warning" style="font-weight: 500">
+        <a href="/displaybanner">Banner Edit</a>
+      </li> -->
+      <li class="bg-warning rounded" style="font-weight: 500">
+        <a href="/displaycontact">Contact</a>
+      </li>
+      <li class="bg-warning rounded" style="font-weight: 500">
+        <a href="/displayuser">User</a>
+      </li>
+      <li class="bg-warning rounded" style="font-weight: 500">
+        <a href="/displayuserblogAll">Users all Blogs</a>
+      </li>
+      <% } %>
+
+      <li class="bg-warning rounded" style="font-weight: 500">
+        <a href="/logout">Logout</a>
+      </li>
+    </ul>
+  </div>
+</div>

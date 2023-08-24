@@ -1,0 +1,25 @@
+<%- include('../header.ejs') %>
+
+<section class="dashboard-wrap mtb-40" style="margin-top: 5.6rem">
+  <div class="container-fluid" style="width: 97%">
+    <div class="body-content">
+      <div class="row pt-5">
+        <%- include('./sidebar.ejs') %>
+        <div class="col-md-10">
+          <div style="font-style: italic" class="dash-right">
+            <h1>Welcome, <%= n %></h1>
+            <h3>Your <%= e %></h3>
+            <img
+              class="rounded-circle"
+              style="width: 100px; height: 100px"
+              src="<%= img.url %>"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../footer.ejs') %>

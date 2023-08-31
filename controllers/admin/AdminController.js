@@ -44,11 +44,11 @@ class AdminController {
         }
       );
       // console.log(image_upload)
-      console.log(req.body);
+      // console.log(req.body);
       const { name, email, phone, address, password, cpassword, image } =
         req.body;
       const admin = await AdminModel.findOne({ email: email });
-      console.log(admin);
+      // console.log(admin);
       if (admin) {
         req.flash("error", "email already exists");
         res.redirect("/register");
@@ -286,7 +286,7 @@ class AdminController {
 
   static update_approve = async (req, res) => {
     try {
-      console.log(req.body)
+      // console.log(req.body)
       const { is_Verified, email, name } = req.body;
       //console.log(is_Verified, email, name)
       const update = await AdminModel.findByIdAndUpdate(req.params.id, {

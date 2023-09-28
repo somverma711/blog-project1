@@ -49,6 +49,24 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <style>
+      .web_banner {
+        display: block;
+      }
+      .mob_banner {
+        display: none;
+      }
+
+      @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        .web_banner {
+          display: none !important;
+        }
+        .mob_banner {
+          display: block !important;
+        }
+      }
+    </style>
   </head>
 
   <body>

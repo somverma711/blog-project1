@@ -30,12 +30,18 @@
             <% r.forEach((recentitem)=>{ %>
             <div class="rb-box">
               <div class="rb-box-img">
-                <a href="/blogdetail/<%= recentitem._id %>">
+                <a
+                  style="text-decoration: none"
+                  href="/blogdetail/<%= recentitem._id %>"
+                >
                   <img class="" src="<%= recentitem.image.url %>" alt="blog1" />
                 </a>
               </div>
               <div class="rb-box-desc">
-                <a href="/blogdetail/<%= recentitem._id %>">
+                <a
+                  style="text-decoration: none"
+                  href="/blogdetail/<%= recentitem._id %>"
+                >
                   <h4><%= recentitem.title %></h4>
                 </a>
                 <p><%= recentitem.createdAt.toLocaleDateString() %></p>

@@ -11,31 +11,33 @@
                 <h4>View List</h4>
               </div>
             </div>
-            <table class="table table-bordered table-striped">
-              <tr>
-                <th>#ID</th>
-                <th>BlogName</th>
-                <th>Category</th>
-                <th>Image</th>
-              </tr>
-
-              <tbody>
+            <div style="overflow-x: auto">
+              <table class="table table-bordered table-striped">
                 <tr>
-                  <td><%= view._id %></td>
-                  <td><%= view.blogname %></td>
-                  <td><%= view.category %></td>
-                  <td>
-                    <img src="<%= view.image.url %>" alt="" width="100px" />
-                  </td>
+                  <th>#ID</th>
+                  <th>BlogName</th>
+                  <th>Category</th>
+                  <th>Image</th>
                 </tr>
-              </tbody>
-              <tr>
-                <th>#ID</th>
-                <th>BlogName</th>
-                <th>Category</th>
-                <th>Image</th>
-              </tr>
-            </table>
+
+                <tbody>
+                  <tr>
+                    <td><%= view._id %></td>
+                    <td><%= view.blogname %></td>
+                    <td><%= view.category %></td>
+                    <td>
+                      <img src="<%= view.image.url %>" alt="" width="100px" />
+                    </td>
+                  </tr>
+                </tbody>
+                <tr>
+                  <th>#ID</th>
+                  <th>BlogName</th>
+                  <th>Category</th>
+                  <th>Image</th>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>

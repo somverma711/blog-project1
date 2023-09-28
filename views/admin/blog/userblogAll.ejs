@@ -13,64 +13,66 @@
               </div>
               <div class="dash-nav"></div>
             </div>
-            <table class="table table-bordered table-striped">
-              <tr>
-                <th>#ID</th>
-                <th>user ID</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>Action</th>
-              </tr>
+            <div style="overflow-x: auto">
+              <table class="table table-bordered table-striped">
+                <tr>
+                  <th>#ID</th>
+                  <th>user ID</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Image</th>
+                  <th>Action</th>
+                </tr>
 
-              <% i=1 %> <% d.forEach((item)=>{ %>
-              <tr>
-                <td><%= i++ %></td>
-                <td><%= item._id %></td>
-                <td><%= item.title.slice(0,20) %></td>
-                <td><%= item.description.slice(0,50) %></td>
-                <td class="text-center">
-                  <img
-                    src="<%= item.image.url %>"
-                    width="50px;"
-                    alt=""
-                    style="height: 2.1rem"
-                  />
-                </td>
-                <td
-                  class="d-flex align-content-center justify-content-around border-0"
-                  style="width: 100%"
-                >
-                  <a
-                    href="/blogview/<%= item._id %>"
-                    class="btn btn-secondary btn-sm"
-                    >view</a
+                <% i=1 %> <% d.forEach((item)=>{ %>
+                <tr>
+                  <td><%= i++ %></td>
+                  <td><%= item._id %></td>
+                  <td><%= item.title.slice(0,20) %></td>
+                  <td><%= item.description.slice(0,50) %></td>
+                  <td class="text-center">
+                    <img
+                      src="<%= item.image.url %>"
+                      width="50px;"
+                      alt=""
+                      style="height: 2.1rem"
+                    />
+                  </td>
+                  <td
+                    class="d-flex align-content-center justify-content-around border-0"
+                    style="width: 100%"
                   >
+                    <a
+                      href="/blogview/<%= item._id %>"
+                      class="btn btn-secondary btn-sm"
+                      >view</a
+                    >
 
-                  <a
-                    href="/blogedit/<%= item._id %>"
-                    class="btn btn-warning btn-sm"
-                    >Edit</a
-                  >
+                    <a
+                      href="/blogedit/<%= item._id %>"
+                      class="btn btn-warning btn-sm"
+                      >Edit</a
+                    >
 
-                  <a
-                    href="/blogdelete/<%= item._id %>"
-                    class="btn btn-danger btn-sm"
-                    >Delete</a
-                  >
-                </td>
-              </tr>
+                    <a
+                      href="/blogdelete/<%= item._id %>"
+                      class="btn btn-danger btn-sm"
+                      >Delete</a
+                    >
+                  </td>
+                </tr>
 
-              <% }) %>
-              <tr>
-                <th>#ID</th>
-                <th>user ID</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>Action</th>
-              </tr>
-            </table>
+                <% }) %>
+                <tr>
+                  <th>#ID</th>
+                  <th>user ID</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Image</th>
+                  <th>Action</th>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>

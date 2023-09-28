@@ -12,29 +12,31 @@
               </div>
               <div class="dash-nav"></div>
             </div>
-            <table class="table table-bordered table-striped">
-              <tr>
-                <th>#ID</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Image</th>
-              </tr>
+            <div style="overflow-x: auto">
+              <table class="table table-bordered table-striped">
+                <tr>
+                  <th>#ID</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Image</th>
+                </tr>
 
-              <tr>
-                <td><%= view._id %></td>
-                <td><%= view.title %></td>
-                <td><%= view.description %></td>
-                <td>
-                  <img src="<%= view.image.url %>" width="50px" alt="" />
-                </td>
-              </tr>
-              <tr>
-                <th>#ID</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Image</th>
-              </tr>
-            </table>
+                <tr>
+                  <td><%= view._id %></td>
+                  <td><%= view.title %></td>
+                  <td><%= view.description %></td>
+                  <td>
+                    <img src="<%= view.image.url %>" width="50px" alt="" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>#ID</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Image</th>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>

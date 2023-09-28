@@ -12,45 +12,54 @@
               </div>
               <div class="dash-nav"></div>
             </div>
-            <table class="table table-bordered table-striped">
-              <tr>
-                <th>#ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Comment</th>
-                <th>Image</th>
-              </tr>
+            <div style="overflow-x: auto">
+              <table class="table table-bordered table-striped">
+                <tr>
+                  <th>#ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                  <th>Comment</th>
+                  <th>Image</th>
+                </tr>
 
-              <tr>
-                <td><%= view._id %></td>
-                <td><%= view.name %></td>
-                <td><%= view.email %></td>
-                <td><%= view.address %></td>
-                <td class="text-center">
-                  <form action="/update_approve/<%= view._id %>" method="post">
-                    <textarea name="comment"></textarea>
-                    <input type="hidden" name="name" value="<%= view.name %>" />
-                    <input
-                      type="hidden"
-                      name="email"
-                      value="<%= view.email %>"
-                    />
-                  </form>
-                </td>
-                <td>
-                  <img src="<%= view.image.url %>" width="50px" alt="" />
-                </td>
-              </tr>
-              <tr>
-                <th>#ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Comment</th>
-                <th>Image</th>
-              </tr>
-            </table>
+                <tr>
+                  <td><%= view._id %></td>
+                  <td><%= view.name %></td>
+                  <td><%= view.email %></td>
+                  <td><%= view.address %></td>
+                  <td class="text-center">
+                    <form
+                      action="/update_approve/<%= view._id %>"
+                      method="post"
+                    >
+                      <textarea name="comment"></textarea>
+                      <input
+                        type="hidden"
+                        name="name"
+                        value="<%= view.name %>"
+                      />
+                      <input
+                        type="hidden"
+                        name="email"
+                        value="<%= view.email %>"
+                      />
+                    </form>
+                  </td>
+                  <td>
+                    <img src="<%= view.image.url %>" width="50px" alt="" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>#ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                  <th>Comment</th>
+                  <th>Image</th>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>

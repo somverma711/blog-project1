@@ -23,67 +23,69 @@
                 </button>
               </div>
             </div>
-            <table class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th>#ID</th>
-                  <th>User ID</th>
-                  <th>Description</th>
-                  <th>Image</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
+            <div style="overflow-x: auto">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>#ID</th>
+                    <th>User ID</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
 
-              <tbody>
-                <% i=1 %> <% d.forEach((item)=>{ %>
-                <tr>
-                  <td><%= i++ %></td>
-                  <td><%= item._id %></td>
-                  <td class="w-50"><%= item.description.slice(0,100) %></td>
-                  <td class="text-center">
-                    <img
-                      src="<%= item.image.url %>"
-                      alt=""
-                      width="50px"
-                      style="height: 2.1rem"
-                    />
-                  </td>
-                  <td
-                    class="d-flex align-content-center justify-content-around border-0"
-                    style="width: 100%"
-                  >
-                    <a
-                      href="/viewabout/<%= item._id %>"
-                      class="btn btn-secondary btn-sm"
-                      >view</a
+                <tbody>
+                  <% i=1 %> <% d.forEach((item)=>{ %>
+                  <tr>
+                    <td><%= i++ %></td>
+                    <td><%= item._id %></td>
+                    <td class="w-50"><%= item.description.slice(0,100) %></td>
+                    <td class="text-center">
+                      <img
+                        src="<%= item.image.url %>"
+                        alt=""
+                        width="50px"
+                        style="height: 2.1rem"
+                      />
+                    </td>
+                    <td
+                      class="d-flex align-content-center justify-content-around border-0"
+                      style="width: 100%"
                     >
+                      <a
+                        href="/viewabout/<%= item._id %>"
+                        class="btn btn-secondary btn-sm"
+                        >view</a
+                      >
 
-                    <a
-                      href="/editabout/<%= item._id %>"
-                      class="btn btn-warning btn-sm"
-                      >Edit</a
-                    >
+                      <a
+                        href="/editabout/<%= item._id %>"
+                        class="btn btn-warning btn-sm"
+                        >Edit</a
+                      >
 
-                    <a
-                      href="/deleteabout/<%= item._id %>"
-                      class="btn btn-danger btn-sm"
-                      >Delete</a
-                    >
-                  </td>
-                </tr>
+                      <a
+                        href="/deleteabout/<%= item._id %>"
+                        class="btn btn-danger btn-sm"
+                        >Delete</a
+                      >
+                    </td>
+                  </tr>
 
-                <% }) %>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th>#ID</th>
-                  <th>User ID</th>
-                  <th>Description</th>
-                  <th>Image</th>
-                  <th>Action</th>
-                </tr>
-              </tfoot>
-            </table>
+                  <% }) %>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>#ID</th>
+                    <th>User ID</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
           </div>
         </div>
       </div>
